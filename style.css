@@ -15,6 +15,38 @@ body {
     background-color: white;
 }
 
+.dark-mode {
+    background-color: var(--bgcolor);
+}
+
+.dark-mode .link-tree h2 {
+    color: white;
+}
+
+.dark-mode .link-tree h4 {
+    color: white;
+}
+
+.dark-mode .link-tree a {
+    background-color: black;
+    color: white;
+    font-weight: normal;
+}
+
+.dark-mode .link-tree button {
+    background-color: darkgrey;
+    color: var(--bgcolor);
+    font-weight: bold;
+}
+
+.dark-mode .link-tree a:hover {
+    background-color: grey;
+}
+
+.dark-mode .link-tree button:after {
+    content: "Ligth Mode";
+}
+
 .link-tree {
     display: flex;
     flex-direction: column;
@@ -51,6 +83,7 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 8px;
+    border-color: var(--bgcolor);
 }
 
 .link-tree a:hover {
@@ -58,6 +91,7 @@ body {
 }
 
 .link-tree button {
+    align-items: center;
     color: darkgrey;
     background: var(--bgcolor);
     height: 22px;
@@ -66,6 +100,10 @@ body {
     position: absolute;
     top: 860px;
     bottom: 100px;
+}
+
+.link-tree button:after {
+    content: "Dark Mode";
 }
 
 @media (min-width: 1024px) {
